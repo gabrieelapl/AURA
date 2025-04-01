@@ -1,0 +1,40 @@
+:root {
+    --branco: #F2F2F2;
+    --roxo_vivo: #9857F2;
+    --roxo_escuro: #4F3673;
+    --preto: #262626;
+    --verde: #98D96A;
+}
+
+@font-face {
+    font-family: 'Designer';
+    src: url(../fontes/Designer.otf);
+}
+
+@font-face {
+    font-family: 'CocogooseDarkmode';
+    src: url(../fontes/Cocogoose-Pro-Darkmode-trial.ttf);
+}
+
+@font-face {
+    font-family: 'CocogooseBold';
+    src: url(../fontes/Cocogoose-Pro-Bold-trial.ttf);
+}
+
+@font-face {
+    font-family: 'CocogooseUltralight';
+    src: url(../fontes/Cocogoose-Pro-Ultralight-trial.ttf);
+}
+
+body{
+    background-color: var(--preto)
+}
+
+.logo{
+    font-family: 'Designer';
+}
+
+.navbar{
+    background-color: var(--branco);
+}
+
