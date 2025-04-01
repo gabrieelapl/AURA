@@ -27,7 +27,7 @@
 }
 
 body{
-    background-color: var(--preto)
+    background-color: var(--branco)
 }
 
 .logo{
@@ -38,3 +38,35 @@ body{
     background-color: var(--branco);
 }
 
+.botao_login {
+    background-color: var(--verde); 
+    border: none;
+    color: white;
+    padding: 7px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: rgba(10, 10, 11, 0.2) 0px 7px 29px 0px;
+}
+
+.header {
+    background-color: #8a3ffc;
+    color: white;
+    padding: 50px 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-radius: 100% 50% 0 0;
+}
