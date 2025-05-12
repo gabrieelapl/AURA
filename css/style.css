@@ -1,0 +1,223 @@
+:root {
+    --branco: #F2F2F2;
+    --roxo_vivo: #9857F2;
+    --roxo_escuro: #4F3673;
+    --preto: #262626;
+    --verde: #98D96A;
+    --cinza: #D4D3D3;
+}
+
+@font-face {
+    font-family: 'Adam-Bold';
+    src: url(../fontes/Adam-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Adam-Light';
+    src: url(../fontes/Adam-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Tommy-Light';
+    src: url(../fontes/MADE\ TOMMY\ Light_PERSONAL\ USE.otf);
+}
+
+@font-face {
+    font-family: 'Tommy-Bold';
+    src: url(../fontes/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf);
+}
+
+@font-face {
+    font-family: 'Tommy-Medium';
+    src: url(../fontes/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf);
+}
+
+@font-face {
+    font-family: 'Tommy-Regular';
+    src: url(../fontes/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf);
+}
+
+body{
+    background-color: #ffffff;
+}
+
+.logo{
+    font-family: 'Adam-Bold';
+    font-weight: bold;
+}
+
+.navbar{
+    background-color: var(--branco);
+    box-shadow: 0px 19px 15px -3px #0000001a;
+}
+
+.navbar .navbar-texto{
+    font-family: 'Tommy-Light';
+}
+
+.header{
+    background-color: var(--roxo_vivo);
+    height: 500px;
+}
+
+.header img{
+    position: relative;
+    width: 720px;
+}
+
+.header h1{
+    font-family: 'Tommy-Bold';
+    color: var(--branco);
+    margin-top: 30%;
+    margin-left: 20%;
+}
+
+.header h5{
+    font-family: 'Tommy-Medium';
+    color: var(--branco);
+    width: 60%;
+    margin-left: 20%;
+}
+
+.header button{
+    color: var(--preto);
+    background-color: var(--verde);
+    border: none;
+    height: 40px;
+    line-height: 30px;
+    padding: 0 40px;
+    font-family: 'Tommy-Medium';
+    border-radius: 30px;
+    margin-top: 1%;
+    margin-left: 20%;
+    box-shadow: 0px 10px 21px 5px #0000001a;
+}
+
+.titulo{
+    color: var(--roxo_escuro);
+    font-family: 'Tommy-Bold';
+    margin-left: 1%;
+}
+
+#container img{
+    margin-top: 3%;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-projeto{
+    background-color: var(--branco);
+    height: 100%;
+    border-color: #D4D3D3;
+}
+
+.titulo-card{
+    font-family: 'Tommy-Medium';
+}
+
+.texto-card{
+    font-family: 'Tommy-Light';
+    font-size: 15px;
+}
+
+.texto-cor{
+    color: #636363;
+}
+
+.sobre-nos-background{
+    background-color: var(--branco);
+}
+
+.sobre-nos-texto{
+    font-size: 20px;
+    font-family: 'Tommy-Medium';
+    text-align: left;
+}
+
+.card-equipe {
+    position: relative;
+    width: 220px;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-image: url('../imgs/bia.png'); /* Substitua por sua imagem */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border-bottom: 5px solid #9857F2;
+}
+
+.card-img{
+    width: 25px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: white;
+    transition: height 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.card-equipe:hover .overlay {
+    height: 100%;
+    opacity: 1;
+}
+
+.overlay h5 {
+    margin: 0;
+    color: #8a2be2;
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #000000;
+    text-align: left;
+    font-family: 'Tommy-Light';
+}
+
+footer .container-fluid{
+    background-color: var(--roxo_escuro);
+    height: 400px;
+}
+
+footer h2{
+    font-family: 'Tommy-Bold';
+    color: #ffffff;
+}
+
+footer p{
+    font-family: 'Tommy-Regular';
+    color: #ffffff;
+    font-size: 13px;
+}
+
+footer hr{
+    color: #ffffff;
+}
+
+footer h5{
+    color: #ffffff;
+    font-family: 'Tommy-Medium';
+}
+
+.direitos{
+    color: #ffffff;
+    font-family: 'Tommy-Light';
+}
+
+
