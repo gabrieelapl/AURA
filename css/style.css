@@ -145,11 +145,23 @@ body{
     height: 350px;
     border-radius: 12px;
     overflow: hidden;
-    background-image: url('../imgs/bia.png'); /* Substitua por sua imagem */
+     /* Substitua por sua imagem */
     background-size: cover;
     background-position: center;
     cursor: pointer;
     border-bottom: 5px solid #9857F2;
+}
+
+.texto-nome{
+    color: #ffffff;
+    font-family: 'Tommy-Medium';
+    margin-top: 270px;
+}
+
+.texto-funcao{
+    color: #ffffff;
+    font-family: 'Tommy-Light';
+    font-size: 15px;
 }
 
 .card-img{
