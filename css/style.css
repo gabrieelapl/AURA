@@ -139,67 +139,87 @@ body{
     text-align: left;
 }
 
+.equipe__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
 .card-equipe {
-    position: relative;
-    width: 220px;
-    height: 350px;
-    border-radius: 12px;
-    overflow: hidden;
-     /* Substitua por sua imagem */
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    border-bottom: 5px solid #9857F2;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 220 / 350;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border-bottom: 5px solid var(--roxo_vivo);
 }
 
-.texto-nome{
-    color: #ffffff;
-    font-family: 'Tommy-Medium';
-    margin-top: 270px;
-}
-
-.texto-funcao{
-    color: #ffffff;
-    font-family: 'Tommy-Light';
-    font-size: 15px;
-}
-
-.card-img{
-    width: 25px;
+.texto-nome {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-family: "Tommy-Regular";
+  font-size: 1rem;
+  margin: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
 }
 
 .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background-color: white;
-    transition: height 0.5s ease;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #fff;
+  transition:
+    height 0.5s ease,
+    opacity 0.4s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .card-equipe:hover .overlay {
-    height: 100%;
-    opacity: 1;
+  height: 100%;
+  opacity: 1;
+}
+
+.card-equipe:hover .texto-nome {
+  opacity: 0;
+}
+
+.card-img {
+  width: 25px;
+  margin-bottom: 10px;
 }
 
 .overlay h5 {
-    margin: 0;
-    color: #8a2be2;
+  font-family: "Tommy-Bold";
+  color: var(--roxo_vivo);
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .overlay p {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #000000;
-    text-align: left;
-    font-family: 'Tommy-Light';
+  font-size: 0.8rem;
+  color: var(--preto);
+  text-align: left;
+  font-family: "Tommy-Light";
+  line-height: 1.5;
+  margin: 0;
 }
 
 footer .container-fluid{
