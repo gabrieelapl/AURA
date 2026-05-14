@@ -55,6 +55,8 @@ body {
 
 .navbar {
   background-color: var(--roxo_escuro);
+  position: relative; 
+  z-index: 10;   
 }
 
 .navbar .navbar-texto .nav-link {
@@ -66,32 +68,37 @@ body {
 /* SEÇÃO HEADER */
 
 .header {
-  position: relative;
   background-color: var(--roxo_escuro);
-  height: 500px;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 5% 0 5% 10%;
+  overflow: visible;
 }
 
 .header img {
   position: absolute;
-  right: 1px;
-  bottom: -400px;
-  width: 900px;
+  right: 0;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 100vw;
+  max-width: 55%;
+  z-index: 2; 
 }
 
 .header h1 {
   font-family: "Tommy-Bold";
   color: var(--branco);
-  margin-top: 30%;
-  margin-left: 20%;
-  padding: 0 80px;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  margin-top: 7%;
 }
 
 .header h5 {
   font-family: "Tommy-Medium";
   color: var(--branco);
-  width: 80%;
-  margin-left: 20%;
-  padding: 0 80px;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+ 
 }
 
 .header button {
@@ -99,13 +106,11 @@ body {
   background-color: var(--verde);
   border: none;
   height: 40px;
-  line-height: 30px;
   padding: 0 40px;
   font-family: "Tommy-Medium";
   border-radius: 30px;
-  margin-top: 1%;
-  margin-left: 32%;
   box-shadow: 0px 10px 21px 5px #0000001a;
+  margin-top: 5%;
 }
 
 /* SEÇÃO PROJETO */
@@ -121,13 +126,9 @@ body {
 
 #produto {
   background-color: var(--roxo_escuro);
-  padding-top: 250px;
-  padding-bottom: 190px;
-}
-
-#produto .row {
-  --bs-gutter-x: -160px;
-  margin-left: 120px;
+  padding: 15% 8% 8%;
+  position: relative;
+  z-index: 1; 
 }
 
 .titulo-container {
@@ -145,11 +146,12 @@ body {
 .card-projeto {
   background-color: var(--branco);
   border-color: #d4d3d3;
-  width: 330px;
-  height: 280px;
-  border-radius: 10%;
+  width: 92%;
+  height: 90%;
+  border-radius: 16px;
   box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
-  padding: 30px;
+  padding: 9%;
+  margin-left: 4%;
 }
 
 .img-card {
@@ -351,21 +353,49 @@ body {
 
 footer .container-fluid {
   background-color: var(--preto);
-  height: 400px;
+  padding: 60px 0;
 }
 
 footer .img-logo-astra img {
   width: 60%;
-  margin-top: 22%;
   height: auto;
 }
 
-footer h5 {
-  color: #ffffff;
-  font-family: "Tommy-Medium";
+.divider {
+  width: 1px !important;
+  height: 170px !important;
+  background-color: var(--branco);
+  border: none;
+  margin: 0 auto;
+}
+
+footer .footer-fot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+footer .fot-link {
+  color: var(--branco);
+  font-family: "Tommy-Light";
+  opacity: 0.7;
+  text-decoration: none;
+  white-space: nowrap;     
+}
+
+footer .fot-link:hover {
+  opacity: 1;
 }
 
 .direitos {
   color: #ffffff;
   font-family: "Tommy-Light";
+  opacity: 0.5;
+  text-align: center;
+  margin: 0;
 }
