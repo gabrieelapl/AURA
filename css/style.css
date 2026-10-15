@@ -1,11 +1,13 @@
 :root {
+  --background: #ffffff; 
   --branco: #f2f2f2;
   --roxo_vivo: #9857f2;
-  --roxo_escuro: #4f3673;
+  --roxo_escuro: #571F87;
   --preto: #262626;
   --verde: #98d96a;
   --cinza: #d4d3d3;
-  --fundo_roxo: #e2d4f4;
+  --roxo-card: #E5DBF2;
+  --roxo-border: #D9C7F2; 
 }
 
 @font-face {
@@ -44,24 +46,27 @@
 }
 
 body {
-  background-color: var(--branco);
+  background-color: var(--background);
 }
 
 .logo {
   font-family: "Lemon-Milk";
-  color: var(--branco);
+  color: var(--roxo_escuro);
   padding: 0 35px;
+  font-size: 1.5rem;
 }
 
 .navbar {
-  background-color: var(--roxo_escuro);
-  position: relative; 
-  z-index: 10;   
+  background-color: var(--branco);
+  position: relative;
+  z-index: 10;
+  padding: 17px 0;
 }
 
 .navbar .navbar-texto .nav-link {
-  font-family: "Tommy-Light";
-  color: var(--branco);
+  font-size: 1.1rem;
+  font-family: "Tommy-Regular";
+  color: var(--roxo_escuro);
   padding: 0 30px;
 }
 
@@ -84,33 +89,37 @@ body {
   transform: translateY(-50%);
   width: 100vw;
   max-width: 55%;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .header h1 {
   font-family: "Tommy-Bold";
   color: var(--branco);
-  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   margin-top: 7%;
 }
 
 .header h5 {
   font-family: "Tommy-Medium";
   color: var(--branco);
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
- 
+  font-size: clamp(1.8rem, 1.5vw, 2.0rem);
+}
+
+.header p {
+  font-family: "Tommy-Light";
+  color: var(--branco);
+  font-size: clamp(1.0rem, 1.5vw, 1.8rem);
 }
 
 .header button {
-  color: var(--preto);
+  color: var(--branco);
   background-color: var(--verde);
   border: none;
-  height: 40px;
-  padding: 0 40px;
+  height: 60px;
+  padding: 0 50px;
   font-family: "Tommy-Medium";
   border-radius: 30px;
-  box-shadow: 0px 10px 21px 5px #0000001a;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 /* SEÇÃO PROJETO */
@@ -128,7 +137,7 @@ body {
   background-color: var(--roxo_escuro);
   padding: 15% 8% 8%;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .titulo-container {
@@ -149,7 +158,6 @@ body {
   width: 92%;
   height: 90%;
   border-radius: 16px;
-  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
   padding: 9%;
   margin-left: 4%;
 }
@@ -202,22 +210,20 @@ body {
 }
 
 .card-step {
-  background-color: #ffffff;
+  background-color: var(--roxo-card);
   border: 1px solid #e0e0e0;
   border-radius: 17px;
   padding: 40px;
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.15);
-
 }
 
 .step-numero {
   min-width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--fundo_roxo);
+  background-color: var(--roxo-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,24 +233,81 @@ body {
 }
 
 .step-titulo {
-    font-family: "Tommy-Regular";
-    font-weight: bold;
-    margin: 0 0 4px 0;
-    font-size: 16px;
-    font-weight: 600; 
+  font-family: "Tommy-Regular";
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .step-texto {
-    font-family: "Tommy-Regular";
-    margin: 0;
-    font-size: 14px;
-    color: #666666;
+  font-family: "Tommy-Regular";
+  margin: 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+/* SEÇÃO INTERFACE */
+
+.interface-background {
+  background-color: var(--roxo-card);
+  padding: 100px;
+}
+
+.titulo-interface {
+  color: var(--preto);
+  font-family: "Tommy-Bold";
+  border-left: 4px solid var(--roxo_escuro);
+  padding-left: 12px;
+  margin-left: 32px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.interface-texto {
+  font-family: "Tommy-Regular";
+  font-size: 16px;
+  margin-left: 3.7%;
+}
+
+#carouselInterface {
+  padding-bottom: 50px; /* espaço para os indicadores */
+}
+
+#carouselInterface .carousel-item img {
+  border-radius: 12px;
+}
+
+.interface-indicadores {
+  bottom: 0;
+}
+
+.interface-indicadores button {
+  background-color: var(--roxo_vivo) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  border: none !important;
+}
+
+#carouselInterface .carousel-control-prev-icon,
+#carouselInterface .carousel-control-next-icon {
+  background-color: var(--roxo_escuro);
+  border-radius: 50%;
+  background-size: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#carouselInterface {
+  max-width: 1000px;      
+  margin: 3rem auto 0;   
+  padding-bottom: 50px;
 }
 
 /* SEÇÃO SOBRE NÓS  */
 
 .titulo-equipe {
-  color: var(--preto );
+  color: var(--preto);
   font-family: "Tommy-Bold";
   border-left: 4px solid var(--roxo_vivo);
   padding-left: 12px;
@@ -385,7 +448,7 @@ footer .fot-link {
   font-family: "Tommy-Light";
   opacity: 0.7;
   text-decoration: none;
-  white-space: nowrap;     
+  white-space: nowrap;
 }
 
 footer .fot-link:hover {
