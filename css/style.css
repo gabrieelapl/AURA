@@ -327,7 +327,7 @@ body {
 
 .equipe__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   padding-left: 2.5%;
   justify-items: center;
